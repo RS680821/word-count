@@ -35,5 +35,6 @@ public class CountUtilTest {
         Assertions.assertTrue(CountUtil.count(internalCache, "bla") == 2);
         CountUtil.add(internalCache, List.of("âme"));
         Assertions.assertTrue(CountUtil.count(internalCache, "âme") == 1);
+        CountUtil.add(internalCache, List.of(" bla")); // shouldn't be added as it is not a word.
     }
 }
